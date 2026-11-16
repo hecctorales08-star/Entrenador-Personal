@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class CatalogoDeRutinas {
+public class CatalogoDeRutinas {amai
 
     public CatalogoDeRutinas(int maxRutinasEnCatalogo) {
         // Inicialización del catálogo de rutinas
