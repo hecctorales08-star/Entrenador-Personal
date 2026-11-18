@@ -6,17 +6,29 @@ import java.util.Scanner;
 public class Utilidades {
     public static String leerCadena(Scanner teclado, String s) {
         // Muestra un mensaje y lee una cadena (línea completa) por teclado
-        return null; // @todo MODIFICAR PARA DEVOLVER LA CADENA LEÍDA
+        System.out.println(s);
+        return teclado.nextLine();
     }
 
     public static int leerNumero(Scanner teclado, String mensaje, int minimo, int maximo) {
         // Muestra un mensaje y lee un número por teclado (si no es un número o está fuera de rango, vuelve a
         // solicitarlo)
-        return 0; // @todo MODIFICAR PARA DEVOLVER EL NÚMERO LEÍDO
+        System.out.println(mensaje);
+        int numero = teclado.nextInt();
+        do {
+            teclado = new Scanner(System.in);
+            if (numero < minimo || numero > maximo){
+                System.out.println("Numero fuera de rango o no es un número");
+            }
+        } while(numero < minimo || numero > maximo);
+
+        return numero; // @todo MODIFICAR PARA DEVOLVER EL NÚMERO LEÍDO
     }
 
     public static int leerDiaDeLaSemana(Scanner teclado, String mensaje) {
         // Muestra un mensaje, lee un día de la semana por teclado (L, M, X, J, V, S, D) y devuelve su posición
+        System.out.println(mensaje);
+
         // dentro de la semana (0-6). Si la entrada no es válida, vuelve a solicitarla
         return 0; // @todo MODIFICAR PARA DEVOLVER EL DÍA DE LA SEMANA LEÍDO
     }
